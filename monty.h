@@ -45,9 +45,13 @@ typedef struct conf_s
 {
 	FILE *filename;
 	char *line;
-	stack_t *stack;
+	char *number;
 	_Bool queue;
 } conf_t;
-void montyfile(char *argv[]);
 
+extern conf_t confi;
+
+void montyfile(int argc, char *argv[]);
+void _pint(stack_s *h);
+void _stork(char *line, stack_t **stack, unsigned int counter);
 #endif

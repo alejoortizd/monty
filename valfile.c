@@ -1,17 +1,30 @@
 #include "monty.h"
-
-void montyfile(char *argv[])
+/**
+ * montyfile - Entry Point
+ * @argc: parameter to check
+ * @argv: parameter to check
+ * Return: void
+ */ 
+void montyfile(int argc, char *argv[])
 {
-	FILE *filename;
+	ssize_t i;
+	size_t BUFSIZ = 0;
+	stack_t *stack = NULL;
+	unsigned int count = 0;
+
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		dprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	filename = fopen(argv[1], "r");
+	confi.filename = fopen(argv[1], "r");
 	if (filename == NULL)
 	{
-		printf("Error: Can't open file %s\n", *argv[1]);
+		dprintf(stderr, "Error: Can't open file %s\n", *argv[1]);
 	}
-	return (0);
+	while (i = getline(confi.line, BUFSIZ, filename) != EOF)
+	{
+		count++;
+		_stork(confi.line, &stack, count)
+	}
 }
