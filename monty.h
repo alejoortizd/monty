@@ -1,7 +1,11 @@
 #ifndef _MONTY_
 #define _MONTY_
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdbool.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -30,6 +34,20 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+/**
+ * struct settings_s - settings for all the program
+ * @file: file
+ * @line: line
+ * @stack: stack
+ * @queue: false
+ */
+typedef struct conf_s
+{
+	FILE *filename;
+	char *line;
+	stack_t *stack;
+	_Bool queue;
+} conf_t;
+void montyfile(char *argv[]);
 
 #endif
