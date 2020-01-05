@@ -2,18 +2,18 @@
 /**
  * _pint - Entry Point
  * @h: parameter to check
- * Return: all elements of the list
+ * @count: parameter to check
+ * Return: all elements of the stack
  */
-void _pint(stack_s *h, unsigned int counter)
+void _pint(stack_t **stack, unsigned int count)
 {
-	size_t i = 0;
+	stack_t *tmp;
 
-	if (h == NULL)
-		dprintf(stderr, "")
-	while (h != NULL)
+	tmp = *stack;
+	if (tmp == NULL)
 	{
-		h = h->next;
-		i++;
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty", count);
+		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", h->n);
+	printf("%d\n", tmp->n);
 }

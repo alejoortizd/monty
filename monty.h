@@ -3,8 +3,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <unistd.h>
-#include <stdbool.h>
+#include <string.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -46,12 +50,12 @@ typedef struct conf_s
 	FILE *filename;
 	char *line;
 	char *number;
-	_Bool queue;
 } conf_t;
 
 extern conf_t confi;
 
-void montyfile(int argc, char *argv[]);
-void _pint(stack_s *h);
 void _stork(char *line, stack_t **stack, unsigned int counter);
+void functions(stack_t **stack, unsigned int count, char *option);
+void _pint(stack_t **stack, unsigned int count);
+void frees(stack_t *stack);
 #endif
