@@ -3,7 +3,7 @@
  * _pall - Entry Point
  * @stack: parameter to check
  * @count: parameter to check
- * Return: all elements of the stack
+ * Return: print list
  */
 void _pall(stack_t **stack, unsigned int count)
 {

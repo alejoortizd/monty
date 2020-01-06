@@ -59,5 +59,6 @@ void functions(stack_t **stack, unsigned int count, char *option);
 void _push(stack_t **stack, unsigned int count);
 void _pall(stack_t **stack, unsigned int count);
 void _pint(stack_t **stack, unsigned int count);
+void _pop(stack_t **stack, unsigned int count);
 void frees(stack_t *stack);
 #endif
