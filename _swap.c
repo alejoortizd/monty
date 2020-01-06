@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _swat - Entry Point
+ * _swap - Entry Point
  * @stack: parameter to check
  * @count: parameter to check
  * Return: print list
