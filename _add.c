@@ -19,7 +19,7 @@ void _add(stack_t **stack, unsigned int count)
 	}
 	if (i < 2)
 	{
-		fprintf(STDERR_FILENO, "L%d: can't add, stack too short\n", count);
+		fprintf(stderrstd, "L%d: can't add, stack too short\n", count);
 		exit(EXIT_FAILURE);
 	}
 	node = (*stack)->next;
