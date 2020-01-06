@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
- * _add - Funtionces of the opcode add.
- * @stack: Stack.
+ * _add - entry point.
+ * @stack: parameter to check.
  * @count: count of the line where the opcode is taken.
  * Return: Void
  */

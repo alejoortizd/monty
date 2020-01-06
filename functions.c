@@ -17,6 +17,7 @@ void functions(stack_t **stack, unsigned int count, char *option)
 		{"pop", _pop},
 		{"add", _add},
 		{"nop", _nop},
+		{"swap", _swap},
 		{NULL, NULL}
 	};
 
