@@ -61,5 +61,6 @@ void _pall(stack_t **stack, unsigned int count);
 void _pint(stack_t **stack, unsigned int count);
 void _pop(stack_t **stack, unsigned int count);
 void _add(stack_t **stack, unsigned int count);
+void _nop(stack_t **stack, unsigned int count);
 void frees(stack_t *stack);
 #endif

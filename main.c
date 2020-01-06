@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	ssize_t i;
 	size_t bufsize = 0;
 	stack_t *stack = NULL;
-	unsigned int count = 0;
+	unsigned int count = 1;
 
 	if (argc != 2)
 	{
@@ -24,11 +24,9 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((i = getline(&confi.line, &bufsize, confi.filename) != EOF))
-	{
-		count++;
+	for (; (i = getline(&confi.line, &bufsize, confi.filename) != EOF); count++)
 		_stork(confi.line, &stack, count);
-	}
 	frees(stack);
 	exit(EXIT_SUCCESS);
+	return (0);
 }
