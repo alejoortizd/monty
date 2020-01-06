@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	for (; (i = getline(&confi.line, &bufsize, confi.filename) != EOF); count++)
+	while ((i = getline(&confi.line, &bufsize, confi.filename) != EOF))
+		count++;
 		_stork(confi.line, &stack, count);
 	frees(stack);
 	exit(EXIT_SUCCESS);
