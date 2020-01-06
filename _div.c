@@ -24,7 +24,7 @@ void _div(stack_t **stack, unsigned int count)
 	}
 	if ((*stack)->n == 0)
 	{
-		fprintf(stderr, "L:%d: division by zero\n", count);
+		fprintf(stderr, "L%d: division by zero\n", count);
 		exit(EXIT_FAILURE);
 	}
 	node = (*stack)->next;
