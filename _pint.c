@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * _pint - Entry Point
- * @h: parameter to check
+ * @stack: parameter to check
  * @count: parameter to check
  * Return: all elements of the stack
  */

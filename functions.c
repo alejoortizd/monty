@@ -12,6 +12,8 @@ void functions(stack_t **stack, unsigned int count, char *option)
 
 	instruction_t op[] = {
 		{"pint", _pint},
+		{"push", _push},
+		{"pall", _pall},
 		{NULL, NULL}
 	};
 
