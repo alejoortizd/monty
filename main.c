@@ -25,8 +25,10 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	while ((i = getline(&confi.line, &bufsize, confi.filename) != EOF))
+	{
 		count++;
 		_stork(confi.line, &stack, count);
+	}
 	frees(stack);
 	exit(EXIT_SUCCESS);
 }
