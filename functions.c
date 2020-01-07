@@ -21,6 +21,7 @@ void functions(stack_t **stack, unsigned int count, char *option)
 		{"sub", _sub},
 		{"mul", _mul},
 		{"div", _div},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
